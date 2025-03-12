@@ -7,15 +7,16 @@ TagManager:
   - Enemy
   - Agent01
   - Agent02
+  - Obstacle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Node
   - Water
   - UI
   - Floor
-  - 
+  - Obstacle
   - 
   - 
   - 

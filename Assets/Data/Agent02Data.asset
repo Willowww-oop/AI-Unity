@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4601e6d833048745a87ce50a0d9a1ad, type: 3}
   m_Name: Agent02Data
   m_EditorClassIdentifier: 
-  distance: 0
-  radius: 0
-  displacement: 0
+  distance: 7.67
+  radius: 6.43
+  displacement: 78.5
+  cohesionWeight: 2.55
+  seperationWeight: 4.07
+  seperationRadius: 3.47
+  alignmentWeight: 3.2
+  obstacleWeight: 10.49

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2910809778255207860}
   - component: {fileID: -5695846436730649315}
   - component: {fileID: 1538365984363829262}
+  - component: {fileID: 7180557087460705832}
   - component: {fileID: 5934426939312388377}
   - component: {fileID: 2324540922076368137}
   - component: {fileID: 2226418258446307496}
@@ -65,9 +66,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: -5695846436730649315}
   data: {fileID: 11400000, guid: 57c599449dfd39d4cb5cfa84241a4057, type: 2}
-  seekPerception: {fileID: -7716578908421498255, guid: 039fc35662614c54db0aec2a2cf610dd, type: 3}
+  seekPerception: {fileID: -7813856002223136845, guid: 039fc35662614c54db0aec2a2cf610dd, type: 3}
   fleePerception: {fileID: 0}
-  flockPerception: {fileID: 0}
+  flockPerception: {fileID: 5934426939312388377}
+  obstaclePerception: {fileID: 0}
+--- !u!114 &7180557087460705832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109428607896528134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8a07972d6011541a242dc9d2c6775a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: 
+  tagName: Obstacle
+  maxDistance: 6
+  maxAngle: 120
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  numRaycast: 8
 --- !u!114 &5934426939312388377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,9 +102,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17857739a3d3cf943ac5a1f048038cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagName: Agent01
+  description: 
+  tagName: Agent02
   maxDistance: 8
   maxAngle: 180
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!33 &2324540922076368137
 MeshFilter:
   m_ObjectHideFlags: 0

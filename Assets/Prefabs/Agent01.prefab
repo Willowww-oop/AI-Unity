@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6188180587710598342}
   - component: {fileID: -3795342270690823157}
   - component: {fileID: 4124241187973816559}
-  - component: {fileID: -7716578908421498255}
+  - component: {fileID: -7813856002223136845}
   - component: {fileID: 3616068076792951614}
   - component: {fileID: 632551826325040871}
   - component: {fileID: 1917652941690882334}
@@ -66,10 +66,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: -3795342270690823157}
   data: {fileID: 11400000, guid: f3f922efce7c2cd428dbcf8e31bd489a, type: 2}
-  seekPerception: {fileID: 0}
-  fleePerception: {fileID: 5934426939312388377, guid: 15ad02c2f3edadb43a3be9a55ea89635, type: 3}
-  flockPerception: {fileID: -7716578908421498255}
---- !u!114 &-7716578908421498255
+  seekPerception: {fileID: 3616068076792951614}
+  fleePerception: {fileID: 0}
+  flockPerception: {fileID: 3616068076792951614}
+  obstaclePerception: {fileID: -7813856002223136845}
+--- !u!114 &-7813856002223136845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,12 +79,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3542083342390561472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17857739a3d3cf943ac5a1f048038cce, type: 3}
+  m_Script: {fileID: 11500000, guid: fb8a07972d6011541a242dc9d2c6775a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagName: Agent01
-  maxDistance: 8
-  maxAngle: 150
+  description: Obstacle
+  tagName: Obstacle
+  maxDistance: 6
+  maxAngle: 120
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  numRaycast: 8
 --- !u!114 &3616068076792951614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,9 +102,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17857739a3d3cf943ac5a1f048038cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagName: Agent02
+  description: 
+  tagName: Agent01
   maxDistance: 8
   maxAngle: 180
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!33 &632551826325040871
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -187,15 +197,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.29665697
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.017143369
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -203,15 +213,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1604981034209185665, guid: 4aa01f1d5c72d4e47a8c44e612a6b6fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
