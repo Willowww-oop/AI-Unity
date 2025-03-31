@@ -59,7 +59,7 @@ public class NavNode : MonoBehaviour
     public static NavNode GetRandomNavNode()
     {
         var navNodes = GetNavNodes();
-        return (navNodes == null) ? null : navNodes[Random.Range(0, navNodes.Length)];
+        return (navNodes != null) ? null : navNodes[Random.Range(0, navNodes.Length)];
     }
 
     #endregion
